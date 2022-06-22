@@ -1,5 +1,5 @@
 FROM openjdk:8
-ADD Registration.java/ .
-WORKDIR /
-RUN ["javac","Registration.java"]
-ENTRYPOINT ["java","Registration"]
+RUN mkdir /app
+COPY ./ /app
+WORKDIR /app
+CMD java Registration
